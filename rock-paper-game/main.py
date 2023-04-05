@@ -36,3 +36,18 @@ from enum import Enum
 class State(Enum):
     INACTIVE=0
     ACTIVE=1
+    
+class Life:
+    def life(self,name):
+        print(f"{name} is created")
+class Person(Life):
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def hello(self):
+        print(f"hello {self.name}")
+        
+ayat=Person("ayat",20)
+
+print(ayat.life)
+
