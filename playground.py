@@ -30,3 +30,29 @@ x = 'John'
 a = 4
 A = "Sally"
 #A will not overwrite a 
+print(isinstance(x,int))
+#Unpack a Collection
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+#The global Keyword
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x) 
+
+class Dog:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        
+    def __gt__(self,other):
+        return True if self.age > other.age else False
+dobby=Dog("dob",10)
+otherdobby=Dog("dobbby",20)
+print(dobby.__gt__(otherdobby))
