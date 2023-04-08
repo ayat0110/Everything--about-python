@@ -56,3 +56,33 @@ class Dog:
 dobby=Dog("dob",10)
 otherdobby=Dog("dobbby",20)
 print(dobby.__gt__(otherdobby))
+
+
+percentage = float(input("Enter the percentage of marks obtained: "))
+
+if percentage > 90:
+    grade = "A"
+elif percentage > 75:
+    grade = "B"
+elif percentage > 65:
+    grade = "C"
+else:
+    grade = "Fail"
+
+print("The grade assigned is:", grade)
+
+for x in range(3):
+ print("hi")
+ 
+languages = ['Swift', 'Python', 'Go', 'JavaScript']
+
+# access items of a list using for loop
+for language in languages:
+    print(language)
+    
+# use of range() to define a range of values
+values = range(4)
+
+# iterate from i = 0 to i = 3
+for i in values:
+    print(i)
