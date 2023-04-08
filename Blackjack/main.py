@@ -23,23 +23,23 @@ class Dek:
                 self.cards.append(Card(suit, rank))
 
     def shuffle(self):
-     random.shuffle(self.cards)
+     if len(self.cards) > 1 :
+      random.shuffle(self.cards)
 
     def deal(self, number):
         cards_dealt = []
         for x in range(number):
          if len(self.cards) > 0 :
           card = self.cards.pop()
-        cards_dealt.append(card)
+          cards_dealt.append(card)
         return cards_dealt
+class Card:
+    def __init__(self, suit, rank):
+     self.suit = suit
+     self.rank = rank
+    def __str__(self):
+        return f"{self.rank['rank']} of {self.suit}"
 
-
-deck1 = Dek()
-deck2 = Dek()
-deck2.shuffle()
-print(deck2.cards)
-print(deck1.cards)
-    
 
 
 
