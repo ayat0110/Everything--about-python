@@ -22,16 +22,18 @@ class Dek:
             for rank in ranks:
                 self.cards.append(Card(suit, rank))
 
-    def shuffle():
-     random.shuffle(cards)
+    def shuffle(self):
+     random.shuffle(self.cards)
 
-    def deal(number):
+    def deal(self, number):
         cards_dealt = []
         for x in range(number):
-         card = cards.pop()
+         card = self.cards.pop()
         cards_dealt.append(card)
         return cards_dealt
 
+
+deck1 = Dek()
     
 
 
